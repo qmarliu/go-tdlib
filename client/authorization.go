@@ -38,6 +38,7 @@ func Authorize(client *Client, authorizationStateHandler AuthorizationStateHandl
 		if err != nil {
 			authorizationError = err
 			client.Close()
+			return err
 		}
 	}
 }
